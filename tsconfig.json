@@ -1,18 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "es2015",
+    "target": "es2017",
+    "module": "es6",
+    "moduleResolution": "node",
+    "alwaysStrict": true,
+    "experimentalDecorators": true,
     "inlineSourceMap": true,
     "inlineSources": true,
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "types": [
-      "qunit"
-    ]
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "types": ["qunit"]
   },
-  "exclude": [
-    "node_modules",
-    "tmp",
-    "dist"
-  ]
+  "include": ["types/**/*"],
+  "exclude": ["node_modules", "tmp", "dist"]
 }
