@@ -22,6 +22,7 @@
     "@babel/plugin-proposal-decorators": "^7.8.3",
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-typescript": "^7.9.0",
+    "@fullhuman/postcss-purgecss": "^2.1.0",
     "@glimmer/babel-plugin-glimmer-env": "~2.0.0-beta.5",
     "@glimmer/babel-plugin-strict-template-precompile": "~2.0.0-beta.5",
     "@glimmer/blueprint": "~2.0.0-beta.5",
