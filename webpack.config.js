@@ -3,6 +3,7 @@ const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = () => {
   const IS_PRODUCTION = process.env.NODE_ENV === 'production';
@@ -18,6 +19,10 @@ module.exports = () => {
       excludeChunks: ['tests'],
     }),
     new CopyPlugin([{ from: 'public', to: 'public' }]),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
   ];
 
   // Include tests in development builds
@@ -46,7 +51,16 @@ module.exports = () => {
         },
         {
           test: /\.css$/,
-          use: ['style-loader', 'css-loader', 'postcss-loader'],
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                hmr: !IS_PRODUCTION,
+              },
+            },
+            'css-loader',
+            'postcss-loader',
+          ],
         },
         {
           test: /\.(png|svg|jpg|gif)$/,
