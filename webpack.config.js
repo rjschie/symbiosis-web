@@ -81,6 +81,13 @@ module.exports = () => {
     },
     devServer: {
       contentBase: path.resolve(__dirname, 'dist'),
+      allowedHosts: [
+        'sjaelland.local',
+        'localhost',
+        '127.0.0.1',
+        '192.168.86.163',
+      ],
+      host: '0.0.0.0',
     },
   };
 };
