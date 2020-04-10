@@ -1,5 +1,24 @@
+/* purgecss start ignore */
 @tailwind base;
-
 @tailwind components;
+/* purgecss end ignore */
 
 @tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+#app {
+  height: 100vh;
+  width: 100vw;
+
+  @apply grid;
+  @apply grid-rows-5;
+
+  @apply p-2;
+  @apply gap-2;
+}

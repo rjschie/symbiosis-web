@@ -1,0 +1,33 @@
+$sun: #f2d43d;
+$water: #49acde;
+$phosphorus: #e07b41;
+$nitrogen: #6bb54e;
+$potassium: #9b77b5;
+
+.counter {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+
+  @apply rounded-md;
+
+  &--sun {
+    background-color: $sun;
+  }
+
+  &--water {
+    background-color: $water;
+  }
+
+  &--phosphorus {
+    background-color: $phosphorus;
+  }
+
+  &--nitrogen {
+    background-color: $nitrogen;
+  }
+
+  &--potassium {
+    background-color: $potassium;
+  }
+}
