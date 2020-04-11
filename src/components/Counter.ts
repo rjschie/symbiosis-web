@@ -5,6 +5,7 @@ import { action, on } from '@glimmer/modifier';
 import { fn } from '@glimmer/helper';
 
 import './Counter.css';
+import Storage from '../utils/storage';
 
 interface Args {
   color: string;
@@ -15,6 +16,11 @@ class Counter extends GlimmerComponent<Args> {
   @tracked value = 0;
   @tracked boundingRect?: DOMRect;
 
+  constructor(owner: unknown, args: Args) {
+    super(owner, args);
+    this.value = Storage.get(this.args.label).value;
+  }
+
   @action
   onClick(dir: string): void {
     if (dir === 'right') {
@@ -22,6 +28,8 @@ class Counter extends GlimmerComponent<Args> {
     } else if (this.value > 0) {
       this.value = this.value - 1;
     }
+
+    Storage.set(this.args.label, this.value);
   }
 }
 
