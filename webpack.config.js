@@ -18,7 +18,7 @@ module.exports = () => {
       template: './index.html',
       excludeChunks: ['tests'],
     }),
-    new CopyPlugin([{ from: 'public', to: 'public' }]),
+    new CopyPlugin([{ from: 'public', to: '.' }]),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css',
