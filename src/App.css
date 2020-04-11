@@ -7,6 +7,7 @@
 
 $bg: #213c52;
 
+/* purgecss start ignore */
 html,
 body {
   height: 100vh;
@@ -36,3 +37,4 @@ body {
   padding-bottom: calc(env(safe-area-inset-bottom) + 2rem);
   background: $bg;
 }
+/* purgecss end ignore */

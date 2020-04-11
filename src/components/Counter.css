@@ -4,6 +4,7 @@ $phosphorus: #e07b41;
 $nitrogen: #6bb54e;
 $potassium: #b994d4;
 
+/* purgecss start ignore */
 .counter {
   @apply flex;
   @apply flex-col;
@@ -55,7 +56,6 @@ $potassium: #b994d4;
     @apply text-lg;
   }
 
-  /* purgecss start ignore */
   &--sun {
     background-color: $sun;
   }
@@ -71,5 +71,5 @@ $potassium: #b994d4;
   &--potassium {
     background-color: $potassium;
   }
-  /* purgecss end ignore */
 }
+/* purgecss end ignore */
