@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AcobaSchie Games</title>
+
+    <meta charset="utf-8" />
+
+    <meta
+      name="viewport"
+      content=" width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+    />
+  </head>
+  <body ontouchstart="">
+    <style>
+      html,
+      body {
+        background-color: #2b4053;
+        color: white;
+        font-size: 16px;
+        height: 80vh;
+        margin: 0;
+        width: 100vw;
+      }
+
+      a,
+      a:hover,
+      a:active,
+      a:visited,
+      a:focus {
+        color: white;
+        text-decoration: none;
+      }
+
+      .app-list {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .app-list .app {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 8rem;
+        justify-content: center;
+        width: 8rem;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+      }
+
+      .app-list .app:active img {
+        transform: scale(1.1);
+      }
+
+      .app-list .app p {
+        font-size: 1.14rem;
+        margin: 0;
+        margin-bottom: 0.75rem;
+      }
+
+      .app-list img {
+        height: 5rem;
+        width: 5rem;
+        transform: scale(1);
+        transition: transform 0.225s ease;
+      }
+    </style>
+
+    <div class="app-list">
+      <a class="app" href="./symbiosis">
+        <p>Symbiosis</p>
+        <img src="./logo192.png" />
+      </a>
+    </div>
+  </body>
+</html>
