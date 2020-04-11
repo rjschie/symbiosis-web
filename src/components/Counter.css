@@ -6,27 +6,65 @@ $potassium: #9b77b5;
 
 .counter {
   @apply flex;
+  @apply flex-col;
   @apply items-center;
   @apply justify-center;
 
   @apply rounded-md;
 
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+
+  &__listener {
+    top: 0;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    user-select: none;
+
+    $start: transparent 20%;
+    $end: rgba(0, 0, 0, 0.05) 20%;
+
+    &.left {
+      left: 0;
+
+      &:active {
+        background: linear-gradient(to left, $start, $end);
+      }
+    }
+
+    &.right {
+      right: 0;
+
+      &:active {
+        background: linear-gradient(to right, $start, $end);
+      }
+    }
+  }
+
+  &__label {
+    @apply pb-2;
+    @apply text-sm;
+  }
+
+  &__value {
+    @apply font-bold;
+    @apply text-lg;
+  }
+
   &--sun {
     background-color: $sun;
   }
-
   &--water {
     background-color: $water;
   }
-
   &--phosphorus {
     background-color: $phosphorus;
   }
-
   &--nitrogen {
     background-color: $nitrogen;
   }
-
   &--potassium {
     background-color: $potassium;
   }
