@@ -63,11 +63,15 @@ module.exports = () => {
           ],
         },
         {
-          test: /\.(png|svg|jpg|gif)$/,
+          test: /\.(png|jpg|gif)$/,
           loader: 'file-loader',
           options: {
             outputPath: 'images',
           },
+        },
+        {
+          test: /\.svg$/,
+          loader: 'svg-inline-loader',
         },
       ],
     },

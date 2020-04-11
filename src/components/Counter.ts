@@ -18,7 +18,15 @@ class Counter extends GlimmerComponent<Args> {
 
   constructor(owner: unknown, args: Args) {
     super(owner, args);
+
+    this.hashChange = this.hashChange.bind(this);
+    window.addEventListener('hashchange', this.hashChange);
+
     this.value = Storage.get(this.args.label).value;
+  }
+
+  willDestroy(): void {
+    window.removeEventListener('hashchange', this.hashChange);
   }
 
   get valueIsZero(): boolean {
@@ -34,6 +42,11 @@ class Counter extends GlimmerComponent<Args> {
     }
 
     Storage.set(this.args.label, this.value);
+  }
+
+  /** Listen for hash change to update state based on Strage. */
+  private hashChange(): void {
+    this.value = Storage.get(this.args.label).value;
   }
 }
 

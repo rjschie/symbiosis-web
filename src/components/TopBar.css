@@ -18,5 +18,16 @@
       @apply bg-gray-400;
     }
   }
+
+  .logo {
+    fill: #a9bdc8;
+    height: 2rem;
+    width: 2rem;
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
 }
 /* purgecss end ignore */

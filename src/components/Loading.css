@@ -1,0 +1,52 @@
+$bg: #2b4053;
+
+/* purgecss start ignore */
+.loading-bg {
+  @apply absolute;
+  @apply inset-0;
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+
+  background: linear-gradient(to bottom, $bg 0, #5a8ba0);
+  pointer-events: none;
+  z-index: 200;
+
+  animation: fade 0.225s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+
+  svg {
+    fill: #a9bdc8;
+    animation: grow 1.6s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(1.14);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+/* purgecss end ignore */
