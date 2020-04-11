@@ -44,6 +44,7 @@ export async function renderComponent(
 // re-export QUnit modules for convenience
 export const module = QUnit.module;
 export const test = QUnit.test;
+export const skip = QUnit.skip;
 
 // Re-export didRender for convenience
 export { didRender };

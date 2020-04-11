@@ -3,6 +3,7 @@
   "test_page": "dist/tests/index.html",
   "routes": {
     "/tests.bundle.js": "dist/tests.bundle.js",
+    "/tests.css": "dist/tests.css",
     "/public": "dist/public",
     "/images": "dist/images"
   },
