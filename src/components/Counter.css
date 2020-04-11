@@ -55,6 +55,7 @@ $potassium: #b994d4;
     @apply text-lg;
   }
 
+  /* purgecss start ignore */
   &--sun {
     background-color: $sun;
   }
@@ -70,4 +71,5 @@ $potassium: #b994d4;
   &--potassium {
     background-color: $potassium;
   }
+  /* purgecss end ignore */
 }
