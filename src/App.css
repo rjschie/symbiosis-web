@@ -25,7 +25,10 @@ body {
   width: 100vw;
 
   @apply grid;
-  @apply grid-rows-5;
+  grid-template-rows: 4rem repeat(5, 1fr);
+
+  @apply px-3;
+  @apply gap-3;
 
   padding-top: calc(env(safe-area-inset-top) + 0.5rem);
   padding-bottom: calc(env(safe-area-inset-bottom) + 2rem);

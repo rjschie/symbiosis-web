@@ -1,0 +1,20 @@
+.top-bar {
+  @apply flex;
+  @apply justify-end;
+  @apply items-end;
+  @apply text-white;
+  @apply pb-2;
+
+  .btn {
+    @apply rounded-md;
+    @apply border;
+    @apply border-gray-600;
+    @apply px-3;
+    @apply py-1;
+
+    &:active {
+      @apply text-black;
+      @apply bg-gray-400;
+    }
+  }
+}
