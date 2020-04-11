@@ -11,7 +11,7 @@
     "lint": "yarn lint:es && yarn lint:types",
     "lint:es": "eslint . --ext=js,ts --cache",
     "lint:types": "tsc --noEmit true",
-    "pretty": "yarn prettier --write \"**/*.{ts,js,css}\"",
+    "pretty": "yarn prettier --write \"**/*.{ts,js,css,json,html}\"",
     "start": "webpack-dev-server",
     "test": "testem ci",
     "test:watch": "testem"
