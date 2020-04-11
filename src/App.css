@@ -27,8 +27,8 @@ body {
   grid-template-rows: 4rem repeat(5, 1fr);
 
   /* background-color: $bg; */
-  height: $height;
   height: 100vh;
+  height: $height;
   margin: 0 auto;
   max-height: 812px;
   max-width: 420px;
