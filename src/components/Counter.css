@@ -2,7 +2,7 @@ $sun: #f2d43d;
 $water: #49acde;
 $phosphorus: #e07b41;
 $nitrogen: #6bb54e;
-$potassium: #9b77b5;
+$potassium: #b994d4;
 
 .counter {
   @apply flex;
@@ -10,21 +10,19 @@ $potassium: #9b77b5;
   @apply items-center;
   @apply justify-center;
 
-  @apply rounded-md;
+  @apply rounded-lg;
 
   overflow: hidden;
   position: relative;
-  user-select: none;
 
   &__listener {
     top: 0;
     position: absolute;
     width: 50%;
     height: 100%;
-    user-select: none;
 
-    $start: transparent 20%;
-    $end: rgba(0, 0, 0, 0.05) 20%;
+    $start: transparent 25%;
+    $end: rgba(0, 0, 0, 0.1) 25%;
 
     &.left {
       left: 0;
@@ -41,6 +39,10 @@ $potassium: #9b77b5;
         background: linear-gradient(to right, $start, $end);
       }
     }
+  }
+
+  &--is-zero &__listener.left:active {
+    background: none;
   }
 
   &__label {

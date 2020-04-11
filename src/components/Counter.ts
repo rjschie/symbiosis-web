@@ -21,6 +21,10 @@ class Counter extends GlimmerComponent<Args> {
     this.value = Storage.get(this.args.label).value;
   }
 
+  get valueIsZero(): boolean {
+    return this.value === 0;
+  }
+
   @action
   onClick(dir: string): void {
     if (dir === 'right') {
@@ -37,7 +41,7 @@ setComponentTemplate(
   createTemplate(
     { on, fn },
     `
-    <div class="counter counter--{{@color}}">
+    <div class="counter counter--{{@color}} {{if this.valueIsZero "counter--is-zero"}}">
       <div class="counter__label">
         {{@label}}
       </div>
