@@ -8,7 +8,7 @@ interface CounterCollection {
   [k: string]: CounterData;
 }
 
-function slugify(str: string): string {
+export function slugify(str: string): string {
   return str.toLowerCase().replace(/\W/g, '-');
 }
 

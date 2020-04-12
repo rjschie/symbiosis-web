@@ -5,7 +5,9 @@ import { action, on } from '@glimmer/modifier';
 import { fn } from '@glimmer/helper';
 
 import './Counter.css';
-import Storage from '../utils/storage';
+import Storage, { slugify } from '../utils/storage';
+
+// import minusSvg from '../'
 
 interface Args {
   color: string;
@@ -15,6 +17,9 @@ interface Args {
 class Counter extends GlimmerComponent<Args> {
   @tracked value = 0;
   @tracked boundingRect?: DOMRect;
+
+  // minusSvg = minusSvg;
+  // plusSvg = plusSvg;
 
   constructor(owner: unknown, args: Args) {
     super(owner, args);
@@ -27,6 +32,15 @@ class Counter extends GlimmerComponent<Args> {
 
   willDestroy(): void {
     window.removeEventListener('hashchange', this.hashChange);
+  }
+
+  get letter(): string {
+    switch (slugify(this.args.label)) {
+      case 'potassium':
+        return 'K';
+      default:
+        return this.args.label.charAt(0).toUpperCase();
+    }
   }
 
   get valueIsZero(): boolean {
@@ -56,17 +70,21 @@ setComponentTemplate(
     `
     <div class="counter counter--{{@color}} {{if this.valueIsZero "counter--is-zero"}}">
       <div class="counter__label">
-        {{@label}}
+        {{this.letter}}
       </div>
       <div class="counter__value">
         {{this.value}}
       </div>
       <div class="counter__listener left"
         {{on "click" (fn this.onClick "left")}}
-      ></div>
+      >
+        {{!-- {{{this.minusSvg}}} --}}
+      </div>
       <div class="counter__listener right"
         {{on "click" (fn this.onClick "right")}}
-      ></div>
+      >
+        {{!-- {{{this.plusSvg}}} --}}
+      </div>
     </div>
   `
   ),

@@ -1,8 +1,13 @@
-$sun: #f2d43d;
-$water: #49acde;
-$phosphorus: #e07b41;
-$nitrogen: #6bb54e;
-$potassium: #b994d4;
+/* $sun: #f2d43d; */
+$sun: #f2dc99;
+$water: #f0f5fa;
+/* $phosphorus: #bcd1d1; */
+$phosphorus: #a9bfc2;
+/* $nitrogen: #4d5254; */
+$nitrogen: #555a5e;
+/* $potassium: #adb3b1; */
+/* $potassium: #949da1; */
+$potassium: #868e91;
 
 /* purgecss start ignore */
 .counter {
@@ -47,13 +52,13 @@ $potassium: #b994d4;
   }
 
   &__label {
-    @apply pb-2;
+    @apply font-bold;
     @apply text-sm;
   }
 
   &__value {
     @apply font-bold;
-    @apply text-lg;
+    font-size: 2.5rem;
   }
 
   &--sun {

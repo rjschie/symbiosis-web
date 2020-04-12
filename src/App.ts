@@ -28,9 +28,9 @@ setComponentTemplate(
       <TopBar />
       <Counter @label="Sun" @color="sun" />
       <Counter @label="Water" @color="water" />
-      <Counter @label="Phosphorus" @color="phosphorus" />
       <Counter @label="Nitrogen" @color="nitrogen" />
       <Counter @label="Potassium" @color="potassium" />
+      <Counter @label="Phosphorus" @color="phosphorus" />
     `
   ),
   App
