@@ -20,7 +20,7 @@ module.exports = () => {
     }),
     new CopyPlugin([{ from: 'public', to: '.' }]),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: '[name].[contenthash].css',
       chunkFilename: '[id].css',
     }),
   ];
@@ -79,7 +79,7 @@ module.exports = () => {
       extensions: ['.ts', '.js', '.json'],
     },
     output: {
-      filename: '[name].bundle.js',
+      filename: '[name].[contenthash].bundle.js',
       path: path.resolve(__dirname, 'dist'),
       publicPath: !IS_PRODUCTION ? '/' : './',
     },
