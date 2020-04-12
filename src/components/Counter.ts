@@ -7,8 +7,6 @@ import { fn } from '@glimmer/helper';
 import './Counter.css';
 import Storage, { slugify } from '../utils/storage';
 
-// import minusSvg from '../'
-
 interface Args {
   color: string;
   label: string;
@@ -17,9 +15,6 @@ interface Args {
 class Counter extends GlimmerComponent<Args> {
   @tracked value = 0;
   @tracked boundingRect?: DOMRect;
-
-  // minusSvg = minusSvg;
-  // plusSvg = plusSvg;
 
   constructor(owner: unknown, args: Args) {
     super(owner, args);
@@ -78,12 +73,12 @@ setComponentTemplate(
       <div class="counter__listener left"
         {{on "click" (fn this.onClick "left")}}
       >
-        {{!-- {{{this.minusSvg}}} --}}
+        –
       </div>
       <div class="counter__listener right"
         {{on "click" (fn this.onClick "right")}}
       >
-        {{!-- {{{this.plusSvg}}} --}}
+        +
       </div>
     </div>
   `

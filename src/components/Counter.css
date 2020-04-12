@@ -1,12 +1,7 @@
-/* $sun: #f2d43d; */
 $sun: #f2dc99;
 $water: #f0f5fa;
-/* $phosphorus: #bcd1d1; */
 $phosphorus: #a9bfc2;
-/* $nitrogen: #4d5254; */
 $nitrogen: #555a5e;
-/* $potassium: #adb3b1; */
-/* $potassium: #949da1; */
 $potassium: #868e91;
 
 /* purgecss start ignore */
@@ -27,11 +22,18 @@ $potassium: #868e91;
     width: 50%;
     height: 100%;
 
+    @apply flex;
+    @apply items-center;
+    opacity: 0.3;
+    @apply font-bold;
+
     $start: transparent 25%;
     $end: rgba(0, 0, 0, 0.1) 25%;
 
     &.left {
       left: 0;
+      @apply justify-start;
+      @apply pl-4;
 
       &:active {
         background: linear-gradient(to left, $start, $end);
@@ -40,6 +42,8 @@ $potassium: #868e91;
 
     &.right {
       right: 0;
+      @apply justify-end;
+      @apply pr-4;
 
       &:active {
         background: linear-gradient(to right, $start, $end);
