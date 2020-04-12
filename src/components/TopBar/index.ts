@@ -2,9 +2,9 @@ import Component from '@glimmer/component';
 import { createTemplate, setComponentTemplate } from '@glimmer/core';
 import { action, on } from '@glimmer/modifier';
 
+import logo from '@symbiosis/public/logo.svg';
+import Storage from '@symbiosis/services/storage';
 import './TopBar.css';
-import logo from '../../public/logo.svg';
-import Storage from '../utils/storage';
 
 export default class TopBar extends Component {
   logo = logo;
@@ -18,6 +18,11 @@ export default class TopBar extends Component {
 
   willDestroy(): void {
     window.removeEventListener('hashchange', this.hashChange);
+  }
+
+  @action
+  showRules(): void {
+    //
   }
 
   @action
@@ -41,6 +46,9 @@ setComponentTemplate(
     { on },
     `
       <div class="top-bar relative">
+        <div class="btn" role="button" {{on "click" this.showRules}}>
+          Guide
+        </div>
         <div class="logo absolute left-0 right-0 bottom 0 m-auto">
           {{{this.logo}}}
         </div>

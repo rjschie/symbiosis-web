@@ -2,7 +2,7 @@ import Component from '@glimmer/component';
 import { createTemplate, setComponentTemplate } from '@glimmer/core';
 
 import './Loading.css';
-import logo from '../../public/logo.svg';
+import logo from '@symbiosis/public/logo.svg';
 
 export default class Loading extends Component {
   logo = logo;

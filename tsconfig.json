@@ -14,6 +14,14 @@
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "paths": {
+      "@symbiosis/components/*": ["src/components/*"],
+      "@symbiosis/helpers/*": ["src/helpers/*"],
+      "@symbiosis/modifiers/*": ["src/modifiers/*"],
+      "@symbiosis/routes/*": ["src/routes/*"],
+      "@symbiosis/services/*": ["src/services/*"],
+      "@symbiosis/public/*": ["public/*"]
+    },
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "paths": {

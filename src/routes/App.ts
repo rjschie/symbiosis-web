@@ -2,10 +2,10 @@ import Component from '@glimmer/component';
 import { createTemplate, setComponentTemplate } from '@glimmer/core';
 import { tracked } from '@glimmer/tracking';
 
+import Counter from '@symbiosis/components/Counter';
+import Loading from '@symbiosis/components/Loading';
+import TopBar from '@symbiosis/components/TopBar';
 import './App.css';
-import Counter from './components/Counter';
-import TopBar from './components/TopBar';
-import Loading from './components/Loading';
 
 export default class App extends Component {
   @tracked showLoading = true;

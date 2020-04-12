@@ -1,7 +1,7 @@
 /* purgecss start ignore */
 .top-bar {
   @apply flex;
-  @apply justify-end;
+  @apply justify-between;
   @apply items-end;
   @apply text-white;
   @apply pb-2;

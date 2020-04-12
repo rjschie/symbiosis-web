@@ -4,8 +4,8 @@ import { createTemplate, setComponentTemplate } from '@glimmer/core';
 import { action, on } from '@glimmer/modifier';
 import { fn } from '@glimmer/helper';
 
+import Storage, { slugify } from '@symbiosis/services/storage';
 import './Counter.css';
-import Storage, { slugify } from '../utils/storage';
 
 interface Args {
   color: string;
