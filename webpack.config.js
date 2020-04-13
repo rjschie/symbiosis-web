@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = () => {
   const IS_PRODUCTION = process.env.NODE_ENV === 'production';
@@ -46,8 +47,8 @@ module.exports = () => {
     module: {
       rules: [
         {
-          test: /\.(js|mjs|ts)$/,
-          use: 'babel-loader',
+          test: /\.ts$/,
+          use: ['babel-loader', 'ts-loader'],
         },
         {
           test: /\.css$/,
@@ -77,6 +78,7 @@ module.exports = () => {
     },
     resolve: {
       extensions: ['.ts', '.js', '.json'],
+      plugins: [new TsconfigPathsPlugin({})],
     },
     output: {
       filename: '[name].[contenthash].bundle.js',

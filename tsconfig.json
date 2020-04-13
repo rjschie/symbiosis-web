@@ -4,6 +4,7 @@
     "module": "es6",
     "moduleResolution": "node",
     "alwaysStrict": true,
+    "baseUrl": "./",
     "experimentalDecorators": true,
     "inlineSourceMap": true,
     "inlineSources": true,
@@ -15,6 +16,9 @@
     "noUnusedParameters": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
+    "paths": {
+      "@symbiosis/*": ["src/*"]
+    },
     "types": ["qunit"]
   },
   "include": ["src/**/*", "types/**/*"],
