@@ -1,5 +1,5 @@
 import { renderComponent } from '@glimmer/core';
-import App from '@symbiosis/App';
+import App from './App';
 
 const containerElement = document.getElementById('app');
 

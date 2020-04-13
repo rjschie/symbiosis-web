@@ -21,14 +21,14 @@ module.exports = () => {
     }),
     new CopyPlugin([{ from: 'public', to: '.' }]),
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      filename: IS_PRODUCTION ? '[name].[contenthash].css' : '[name].css',
       chunkFilename: '[id].css',
     }),
   ];
 
   // Include tests in development builds
   if (!IS_PRODUCTION) {
-    entry.tests = glob.sync('./tests/**/*.test.js');
+    entry.tests = glob.sync('./tests/**/*.test.ts');
 
     plugins.push(
       new HtmlWebpackPlugin({
@@ -81,7 +81,9 @@ module.exports = () => {
       plugins: [new TsconfigPathsPlugin({})],
     },
     output: {
-      filename: '[name].[contenthash].bundle.js',
+      filename: IS_PRODUCTION
+        ? '[name].[contenthash].bundle.js'
+        : '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
       publicPath: !IS_PRODUCTION ? '/' : './',
     },

@@ -16,11 +16,8 @@
     "noUnusedParameters": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
-    "paths": {
-      "@symbiosis/*": ["src/*"]
-    },
     "types": ["qunit"]
   },
-  "include": ["src/**/*", "types/**/*"],
+  "include": ["src/**/*", "tests/**/*", "types/**/*"],
   "exclude": ["node_modules", "tmp", "dist"]
 }
