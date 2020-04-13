@@ -1,6 +1,6 @@
 import { module, renderComponent, skip, test } from '../util';
 
-import App from '../../src/App';
+import App from '@symbiosis/routes/App';
 
 module('App test', () => {
   test('it works', async (assert) => {

@@ -28,7 +28,7 @@ module.exports = () => {
 
   // Include tests in development builds
   if (!IS_PRODUCTION) {
-    entry.tests = glob.sync('./tests/**/*.test.js');
+    entry.tests = glob.sync('./tests/**/*.test.ts');
 
     plugins.push(
       new HtmlWebpackPlugin({
