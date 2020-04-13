@@ -28,7 +28,7 @@ $potassium: #868e91;
     @apply font-bold;
 
     $start: transparent 25%;
-    $end: rgba(0, 0, 0, 0.1) 25%;
+    $end: rgba(0, 0, 0, 0.5) 25%;
 
     &.left {
       left: 0;
