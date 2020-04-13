@@ -5,7 +5,7 @@ import { action, on } from '@glimmer/modifier';
 import { fn } from '@glimmer/helper';
 
 import Storage, { slugify } from '@symbiosis/services/storage';
-import './Counter.css';
+import './index.css';
 
 interface Args {
   color: string;

@@ -4,7 +4,7 @@ import { action, on } from '@glimmer/modifier';
 
 import logo from '@symbiosis/public/logo.svg';
 import Storage from '@symbiosis/services/storage';
-import './TopBar.css';
+import './index.css';
 
 export default class TopBar extends Component {
   logo = logo;

@@ -24,9 +24,6 @@
     },
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
-    "paths": {
-      "@symbiosis/*": ["src/*"]
-    },
     "types": ["qunit"]
   },
   "include": ["src/**/*", "types/**/*"],
